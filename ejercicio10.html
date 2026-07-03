@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Conversor de Temperatura | Ejercicio 10</title>
+    <link rel="stylesheet" href="css/ejercicio10.css">
+    <script src="js/ejercicio10.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+</head>
+<body>
+
+    <div class="contenedor-calculadora">
+        <h1>Conversor de Temperatura</h1>
+        <p class="subtitulo">Convierte grados Celsius a Fahrenheit al instante.</p>
+        
+        <div class="formulario">
+            <div class="grupo-campo">
+                <label for="celsius">Grados Celsius (°C):</label>
+                <input type="text" id="celsius" placeholder="Ej: 25">
+            </div>
+
+            <button type="button" onclick="convertir()" class="boton-convertir">Convertir</button>
+
+            <div class="grupo-campo">
+                <label for="fahrenheit">Resultado en Fahrenheit (°F):</label>
+                <input type="text" id="fahrenheit" readonly placeholder="Aquí aparecerá el resultado">
+            </div>
+        </div>
+    </div>
+
+</body>
+</html>
