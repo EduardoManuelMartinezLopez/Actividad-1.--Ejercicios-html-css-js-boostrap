@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 <!DOCTYPE html>
 <html lang="es">
 <head>
@@ -42,4 +43,50 @@
     </div>
 
 </body>
+=======
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Estadísticas de Números | Ejercicio 14</title>
+    <link rel="stylesheet" href="css/ejercicio14.css">
+    <script src="js/ejercicio14.js" defer></script>
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+</head>
+<body>
+
+    <div class="contenedor-analizador">
+        <h1>Analizador de Series Numéricas</h1>
+        <p class="subtitulo">Ingresa una lista de números separados exclusivamente por comas.</p>
+        
+        <div class="formulario">
+            <div class="grupo-campo">
+                <label for="entradaNumeros">Introduce los números:</label>
+                <input type="text" id="entradaNumeros" placeholder="Ej: 10, 20, 30, 40, 50">
+            </div>
+
+            <button type="button" onclick="procesarNumeros()" class="boton-calcular">Calcular Estadísticas</button>
+
+            <div class="bloque-resultados">
+                <div class="grupo-campo">
+                    <label for="numMayor">Número Mayor:</label>
+                    <input type="text" id="numMayor" readonly placeholder="Esperando datos...">
+                </div>
+
+                <div class="grupo-campo">
+                    <label for="numMenor">Número Menor:</label>
+                    <input type="text" id="numMenor" readonly placeholder="Esperando datos...">
+                </div>
+
+                <div class="grupo-campo">
+                    <label for="promedio">Promedio General:</label>
+                    <input type="text" id="promedio" readonly placeholder="Esperando datos...">
+                </div>
+            </div>
+        </div>
+    </div>
+
+</body>
+>>>>>>> a559d1e5e7ff36c2bd2500d7aa05b6f2b99c3e23
 </html>

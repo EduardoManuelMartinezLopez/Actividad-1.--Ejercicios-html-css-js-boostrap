@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 :root {
     --color-primario: #3498db;     /* Azul moderno */
     --color-exito: #27ae60;        /* Verde para el resultado exitoso */
@@ -101,4 +102,109 @@ input[readonly] {
 
 .boton-convertir:active {
     transform: scale(0.98); /* Pequeño efecto de hundido al hacer clic */
+=======
+:root {
+    --color-primario: #3498db;     /* Azul moderno */
+    --color-exito: #27ae60;        /* Verde para el resultado exitoso */
+    --color-fondo: #f4f6f7;        /* Gris claro de fondo general */
+    --color-texto: #2c3e50;        /* Gris oscuro para textos */
+    --color-borde: #dcdde1;        /* Gris para los bordes de inputs */
+    --color-bloqueado: #f8f9fa;     /* Gris sutil para el campo readonly */
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: var(--color-fondo);
+    color: var(--color-texto);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh; /* Centra verticalmente en toda la pantalla */
+    padding: 20px;
+}
+
+.contenedor-calculadora {
+    background-color: white;
+    max-width: 400px;
+    width: 100%;
+    padding: 30px;
+    border-radius: 12px;
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.08);
+    text-align: center;
+}
+
+h1 {
+    font-size: 24px;
+    margin-bottom: 8px;
+    color: #2c3e50;
+}
+
+.subtitulo {
+    font-size: 14px;
+    color: #7f8c8d;
+    margin-bottom: 25px;
+}
+
+.grupo-campo {
+    text-align: left;
+    margin-bottom: 20px;
+}
+
+label {
+    display: block;
+    font-weight: 600;
+    font-size: 14px;
+    margin-bottom: 8px;
+}
+
+input {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid var(--color-borde);
+    border-radius: 8px;
+    font-size: 16px;
+    transition: border-color 0.3s;
+}
+
+input:focus {
+    outline: none;
+    border-color: var(--color-primario);
+}
+
+/* Estilo específico para resaltar el campo readonly bloqueado */
+input[readonly] {
+    background-color: var(--color-bloqueado);
+    color: var(--color-exito);
+    font-weight: bold;
+    border-style: dashed; /* Un borde punteado para denotar que no se edita */
+    cursor: not-allowed;  /* Cambia el cursor para indicar bloqueo */
+}
+
+.boton-convertir {
+    width: 100%;
+    background-color: var(--color-primario);
+    color: white;
+    border: none;
+    padding: 14px;
+    font-size: 16px;
+    font-weight: bold;
+    border-radius: 8px;
+    cursor: pointer;
+    margin-bottom: 5px;
+    transition: background-color 0.3s, transform 0.1s;
+}
+
+.boton-convertir:hover {
+    background-color: #2980b9;
+}
+
+.boton-convertir:active {
+    transform: scale(0.98); /* Pequeño efecto de hundido al hacer clic */
+>>>>>>> a559d1e5e7ff36c2bd2500d7aa05b6f2b99c3e23
 }

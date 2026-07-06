@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 /* Se declaran variables globales en la raíz para mantener una paleta de colores uniforme y fácil de modificar */
 :root {
     --color-primario: #059669;       
@@ -84,4 +85,133 @@ body {
     background-color: #f8fafc;
     font-weight: bold;
     color: var(--color-primario);
+=======
+/* Declaración de variables globales en el nodo raíz para un mantenimiento ágil del diseño */
+:root {
+    --color-primario: #059669;       /* Verde esmeralda institucional */
+    --color-primario-hover: #047857; /* Tono más oscuro para eventos interactivos */
+    --color-fondo: #f4f6f8;          /* Gris claro texturizado para el fondo general */
+    --color-texto: #1e293b;          /* Gris oscuro de alta legibilidad para textos */
+    --color-bordes: #cbd5e1;         /* Gris tenue para delimitadores de campos */
+    --color-readonly: #f8fafc;       /* Tono diferencial para deshabilitar campos */
+}
+
+/* Reset de márgenes y homogeneización del modelo de caja de los navegadores */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Centrado vertical y horizontal absoluto de la tarjeta en la pantalla */
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: var(--color-fondo);
+    color: var(--color-texto);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    padding: 20px;
+}
+
+/* Estructura del contenedor principal tipo tarjeta (Card) */
+.contenedor-calculadora {
+    background-color: white;
+    max-width: 440px;
+    width: 100%;
+    padding: 35px 30px;
+    border-radius: 12px;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.05);
+}
+
+h1 {
+    font-size: 22px;
+    font-weight: 700;
+    text-align: center;
+    margin-bottom: 6px;
+    color: var(--color-texto);
+}
+
+.subtitulo {
+    font-size: 13px;
+    color: #64748b;
+    text-align: center;
+    margin-bottom: 25px;
+    line-height: 1.4;
+}
+
+/* Espaciado estructural para los grupos de formulario */
+.grupo-campo {
+    margin-bottom: 16px;
+}
+
+label {
+    display: block;
+    font-weight: 600;
+    font-size: 13px;
+    margin-bottom: 6px;
+    color: #475569;
+}
+
+input {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid var(--color-bordes);
+    border-radius: 6px;
+    font-size: 15px;
+    transition: border-color 0.2s, box-shadow 0.2s;
+}
+
+/* Efecto de enfoque interactivo al posicionarse sobre un campo editable */
+input:focus {
+    outline: none;
+    border-color: var(--color-primario);
+    box-shadow: 0 0 0 3px rgba(5, 150, 105, 0.12);
+}
+
+/* Disposición cuadriculada (Grid) para la botonera de operaciones */
+.panel-botones {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr); /* Crea dos columnas simétricas */
+    gap: 10px;                             /* Espaciado interno entre botones */
+    margin: 20px 0;
+}
+
+.btn-operacion {
+    background-color: var(--color-primario);
+    color: white;
+    border: none;
+    padding: 12px;
+    font-size: 14px;
+    font-weight: 600;
+    border-radius: 6px;
+    cursor: pointer;
+    transition: background-color 0.2s, transform 0.1s;
+}
+
+/* Estados interactivos para los botones */
+.btn-operacion:hover {
+    background-color: var(--color-primario-hover);
+}
+
+.btn-operacion:active {
+    transform: scale(0.98); /* Sutil efecto de hundimiento al hacer clic */
+}
+
+/* Separación visual decorativa para la sección de salida de datos */
+.campo-resultado {
+    margin-top: 20px;
+    padding-top: 15px;
+    border-top: 2px dashed #e2e8f0;
+}
+
+/* Estilos de restricción aplicados al campo de solo lectura */
+input[readonly] {
+    background-color: var(--color-readonly);
+    color: #0f172a;
+    font-weight: 700;
+    cursor: not-allowed; /* Cambia el puntero indicando bloqueo */
+    border-color: #e2e8f0;
+>>>>>>> a559d1e5e7ff36c2bd2500d7aa05b6f2b99c3e23
 }
