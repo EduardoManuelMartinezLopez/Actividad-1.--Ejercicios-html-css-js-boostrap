@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<!-- Se declara el documento como HTML5 -->
+
+<html lang="es">
+<!-- Se define el idioma español para toda la página -->
+
+<head>
+    <!-- Se establece la codificación UTF-8 para mostrar correctamente tildes y caracteres especiales -->
+    <meta charset="UTF-8">
+    
+    <!-- Se configura el viewport para lograr un diseño responsivo en dispositivos móviles -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <!-- Título mostrado en la pestaña del navegador -->
+    <title>Gestor de Tareas Persistente | Ejercicio 17</title>
+    
+    <!-- Se enlaza la hoja de estilos externa correspondiente a este ejercicio -->
+    <link rel="stylesheet" href="css/ejercicio17.css">
+    
+    <!-- Se importa el script del ejercicio con 'defer' para asegurar que el DOM ya esté cargado 
+         antes de que el JavaScript intente manipular sus elementos -->
+    <script src="js/ejercicio17.js" defer></script>
+    
+    <!-- Se importa SweetAlert2 desde CDN para las alertas de confirmación y advertencia -->
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+</head>
+
+<body>
+
+    <!-- Contenedor principal tipo tarjeta que envuelve toda la aplicación de tareas -->
+    <div class="contenedor-tareas">
+        
+        <!-- Título principal de la aplicación -->
+        <h1>Gestión de Tareas</h1>
+        
+        <!-- Subtítulo que describe brevemente la funcionalidad (uso de localStorage y closures) -->
+        <p class="subtitulo">Aplicación con almacenamiento persistente local optimizada mediante Closures.</p>
+        
+        <!-- Div que agrupa el formulario de ingreso y la lista de tareas -->
+        <div class="formulario">
+            
+            <!-- Grupo de campo con la etiqueta e input para escribir la nueva tarea -->
+            <div class="grupo-campo">
+                <label for="nuevaTarea">Descripción de la Tarea:</label>
+                <input type="text" id="nuevaTarea" placeholder="Ej: Estudiar patrones de diseño en JS">
+            </div>
+
+            <!-- Botón que, al hacer clic, ejecuta la función 'ejecutarInsercion' definida en el JS 
+                 para leer el input y registrar la nueva tarea -->
+            <button type="button" onclick="ejecutarInsercion()" class="btn-agregar">Agregar Tarea</button>
+            
+            <!-- Bloque que contiene el listado de tareas ya guardadas -->
+            <div class="bloque-listado">
+                <h2>Mis Tareas Pendientes</h2>
+                
+                <!-- Lista desordenada vacía. Su contenido (los <li> de cada tarea) se genera 
+                     dinámicamente desde JavaScript mediante la función 'renderizarTareas' -->
+                <ul id="listaTareas"></ul>
+            </div>
+            
+        </div>
+    </div>
+
+</body>
+</html>

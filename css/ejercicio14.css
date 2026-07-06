@@ -1,0 +1,112 @@
+:root {
+    --color-principal: #0f766e;      /* Azul pizarra / Turquesa oscuro */
+    --color-principal-hover: #115e59;/* Tono más oscuro para el estado hover */
+    --color-fondo-pagina: #f1f5f9;   /* Fondo gris claro neutro */
+    --color-texto: #1e293b;          /* Gris oscuro para contraste de lectura */
+    --color-borde: #cbd5e1;          /* Gris para los bordes */
+    --color-readonly: #f8fafc;       /* Fondo claro sutil para campos bloqueados */
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: var(--color-fondo-pagina);
+    color: var(--color-texto);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    padding: 20px;
+}
+
+.contenedor-analizador {
+    background-color: white;
+    max-width: 460px;
+    width: 100%;
+    padding: 35px 30px;
+    border-radius: 12px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05);
+}
+
+h1 {
+    font-size: 24px;
+    font-weight: 700;
+    text-align: center;
+    margin-bottom: 8px;
+}
+
+.subtitulo {
+    font-size: 13px;
+    color: #64748b;
+    text-align: center;
+    margin-bottom: 25px;
+    line-height: 1.4;
+}
+
+.grupo-campo {
+    margin-bottom: 18px;
+}
+
+label {
+    display: block;
+    font-weight: 600;
+    font-size: 14px;
+    margin-bottom: 6px;
+    color: #475569;
+}
+
+input {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid var(--color-borde);
+    border-radius: 6px;
+    font-size: 15px;
+    transition: border-color 0.2s, box-shadow 0.2s;
+}
+
+input:focus {
+    outline: none;
+    border-color: var(--color-principal);
+    box-shadow: 0 0 0 3px rgba(15, 118, 110, 0.15);
+}
+
+.bloque-resultados {
+    margin-top: 25px;
+    padding-top: 20px;
+    border-top: 2px dashed #e2e8f0;
+}
+
+/* Campos readonly dedicados a los resultados */
+input[readonly] {
+    background-color: var(--color-readonly);
+    color: #0f172a;
+    font-weight: 600;
+    cursor: not-allowed;
+    border: 1px solid #e2e8f0;
+}
+
+.boton-calcular {
+    width: 100%;
+    background-color: var(--color-principal);
+    color: white;
+    border: none;
+    padding: 14px;
+    font-size: 15px;
+    font-weight: 600;
+    border-radius: 6px;
+    cursor: pointer;
+    transition: background-color 0.2s;
+}
+
+.boton-calcular:hover {
+    background-color: var(--color-principal-hover);
+}
+
+.boton-calcular:active {
+    transform: scale(0.99);
+}

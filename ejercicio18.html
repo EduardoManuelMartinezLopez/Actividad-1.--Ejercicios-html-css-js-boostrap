@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<!-- Se declara el documento como HTML5 -->
+
+<html lang="es">
+<!-- Se define el idioma español para el documento -->
+
+<head>
+    <!-- Se establece la codificación UTF-8 -->
+    <meta charset="UTF-8">
+    
+    <!-- Se configura el viewport para que Bootstrap y el diseño se adapten bien a pantallas móviles -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <!-- Título mostrado en la pestaña del navegador -->
+    <title>Manipulación del DOM y Bootstrap | Ejercicio 18</title>
+    
+    <!-- Se importa el framework Bootstrap 5.3.3 desde CDN, que aporta las clases de diseño 
+         (tarjetas, botones, grid, inputs, etc.) usadas en este ejercicio -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    
+    <!-- Se importa el script propio del ejercicio con 'defer' para que se ejecute 
+         después de que el HTML esté completamente cargado -->
+    <script src="js/ejercicio18.js" defer></script>
+    
+    <!-- Se importa SweetAlert2 desde CDN para mostrar la alerta de campo vacío -->
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+</head>
+
+<body class="bg-light">
+<!-- Se aplica la clase de Bootstrap 'bg-light' para dar un fondo gris claro a toda la página -->
+
+    <!-- Contenedor de Bootstrap que centra y limita el ancho del contenido, con espaciado vertical (py-5) -->
+    <div class="container py-5">
+        
+        <!-- Fila de Bootstrap que centra su contenido horizontalmente -->
+        <div class="row justify-content-center">
+            
+            <!-- Columna responsiva: ocupa todo el ancho en móvil (col-12) y la mitad en pantallas medianas o mayores (col-md-6) -->
+            <div class="col-12 col-md-6">
+                
+                <!-- Tarjeta de Bootstrap con sombra suave, sin borde y esquinas redondeadas -->
+                <div class="card shadow-sm border-0 rounded-3">
+                    
+                    <!-- Encabezado de la tarjeta con texto blanco, espaciado vertical y color de fondo personalizado en línea -->
+                    <div class="card-header text-white py-3 text-center" style="background-color: #630330;">
+                        
+                        <!-- Título principal dentro del encabezado, con tamaño reducido (h4) para encajar en la tarjeta -->
+                        <h1 class="h4 mb-1">Lista Dinámica de Elementos</h1>
+                        
+                        <!-- Texto descriptivo pequeño y semi-transparente (opacity-75) debajo del título -->
+                        <p class="small mb-0 opacity-75">Inserción y eliminación en tiempo real usando nodos del DOM</p>
+                    </div>
+                    
+                    <!-- Cuerpo de la tarjeta con relleno interno amplio (p-4) -->
+                    <div class="card-body p-4">
+                        
+                        <!-- Grupo de input de Bootstrap que une visualmente el campo de texto y el botón -->
+                        <div class="input-group mb-4">
+                            
+                            <!-- Campo de texto grande donde el usuario escribe el nuevo elemento a agregar -->
+                            <input type="text" id="nuevoElemento" class="form-control form-control-lg" placeholder="Escribe un nuevo elemento..." aria-label="Nuevo elemento">
+                            
+                            <!-- Botón verde de Bootstrap que dispara la inserción del elemento mediante JavaScript -->
+                            <button class="btn btn-success px-4" type="button" id="agregarBtn">Agregar</button>
+                        </div>
+                        
+                        <!-- Subtítulo pequeño en mayúsculas que introduce la lista de elementos -->
+                        <h2 class="h6 text-secondary text-uppercase fw-bold mb-3">Elementos Registrados:</h2>
+                        
+                        <!-- Lista desordenada vacía con estilo de Bootstrap 'list-group'. 
+                             Sus elementos <li> se crean dinámicamente desde JavaScript al presionar 'Agregar' o Enter -->
+                        <ul id="lista" class="list-group">
+                        </ul>
+                        
+                    </div>
+                </div> 
+            </div>
+        </div>
+    </div>
+
+</body>
+</html>

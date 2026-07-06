@@ -1,0 +1,160 @@
+/* ==========================================
+   VARIABLES GLOBALES (PALETA DE COLORES)
+   ========================================== */
+/* Se utiliza :root para almacenar los colores en variables globales, facilitando su reutilización y modificación en todo el documento */
+:root {
+    --color-primario: #4338ca;       /* Se define un color azul índigo oscuro para botones principales */
+    --color-primario-hover: #312e81; /* Se define un azul más oscuro para el efecto al pasar el cursor */
+    --color-peligro: #dc2626;        /* Se define un color rojo para acciones destructivas (como eliminar) */
+    --color-peligro-hover: #991b1b;  /* Se define un rojo oscuro para el hover del botón eliminar */
+    --color-fondo: #f8fafc;          /* Se define un tono gris casi blanco para el fondo general */
+    --color-texto: #0f172a;          /* Se define un color gris oscuro para el texto principal */
+    --color-bordes: #e2e8f0;         /* Se define un gris claro para las líneas de división y bordes */
+}
+
+/* ==========================================
+   RESETEO DEL NAVEGADOR
+   ========================================== */
+* {
+    margin: 0;               /* Se eliminan los márgenes exteriores predeterminados del navegador */
+    padding: 0;              /* Se eliminan los márgenes internos predeterminados */
+    box-sizing: border-box;  /* Se asegura de que los bordes y el padding no aumenten el ancho total de los elementos */
+}
+
+/* ==========================================
+   DISEÑO DEL CUERPO (BODY)
+   ========================================== */
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; /* Se establece el tipo de letra principal para toda la página */
+    background-color: var(--color-fondo); /* Se aplica el color de fondo almacenado en la variable */
+    color: var(--color-texto);            /* Se aplica el color de texto general almacenado en la variable */
+    display: flex;                        /* Se utiliza el modelo Flexbox para manejar el diseño de la pantalla */
+    justify-content: center;              /* Se centra el contenido horizontalmente (eje X) */
+    align-items: center;                  /* Se centra el contenido verticalmente (eje Y) */
+    min-height: 100vh;                    /* Se indica que el cuerpo debe ocupar al menos el 100% de la altura visible de la pantalla */
+    padding: 20px;                        /* Se añade un margen interno de seguridad para dispositivos móviles */
+}
+
+/* ==========================================
+   CONTENEDOR PRINCIPAL (LA TARJETA)
+   ========================================== */
+.contenedor-tareas {
+    background-color: #ffffff;            /* Se establece el color de fondo de la tarjeta a blanco puro */
+    width: 100%;                          /* Se indica que la tarjeta ocupará todo el ancho disponible */
+    max-width: 500px;                     /* Se restringe el crecimiento de la tarjeta a un máximo de 500 píxeles de ancho */
+    padding: 30px;                        /* Se genera un espacio interno entre el borde y el contenido de la tarjeta */
+    border-radius: 12px;                  /* Se redondean las esquinas de la tarjeta 12 píxeles para suavizar el diseño */
+    box-shadow: 0 4px 15px rgba(0,0,0,0.1);/* Se dibuja una sombra exterior ligera para dar un efecto de elevación 3D */
+    text-align: center;                   /* Se centra el texto (especialmente los títulos) dentro del contenedor */
+}
+
+/* ==========================================
+   TEXTOS Y TÍTULOS
+   ========================================== */
+h1 {
+    font-size: 24px;                      /* Se define el tamaño de letra para el título principal a 24 píxeles */
+    color: var(--color-primario);         /* Se pinta el título con el color azul índigo definido en la paleta */
+    margin-bottom: 5px;                   /* Se establece una separación de 5 píxeles por debajo del título */
+}
+
+.subtitulo {
+    font-size: 13px;                      /* Se reduce el tamaño de letra del subtítulo a 13 píxeles */
+    color: #64748b;                       /* Se aplica un tono grisáceo al texto del subtítulo para que no compita con el título */
+    margin-bottom: 25px;                  /* Se agrega una separación inferior de 25 píxeles para separar los títulos del formulario */
+}
+
+/* ==========================================
+   CAMPOS DE ENTRADA (INPUTS)
+   ========================================== */
+.grupo-campo {
+    text-align: left;                     /* Se fuerza la alineación del texto hacia la izquierda para la etiqueta (label) */
+    margin-bottom: 15px;                  /* Se define un margen inferior para separar este bloque del botón de abajo */
+}
+
+label {
+    display: block;                       /* Se convierte la etiqueta en un bloque para que ocupe toda la línea y empuje el input hacia abajo */
+    font-size: 14px;                      /* Se define un tamaño de 14 píxeles para el texto de la etiqueta */
+    font-weight: 600;                     /* Se aplica un grosor intermedio (semi-negrita) a la fuente */
+    margin-bottom: 8px;                   /* Se separa la etiqueta del campo de entrada por 8 píxeles */
+}
+
+input[type="text"] {
+    width: 100%;                          /* Se obliga al campo de texto a estirarse al 100% del contenedor */
+    padding: 12px;                        /* Se infla el campo con 12 píxeles de relleno para hacerlo más fácil de tocar o clicar */
+    border: 1px solid var(--color-bordes);/* Se dibuja un borde de 1 píxel, continuo y de color gris claro */
+    border-radius: 6px;                   /* Se redondean las esquinas del campo de texto */
+    font-size: 14px;                      /* Se define el tamaño del texto que el usuario escribirá en 14 píxeles */
+}
+
+/* ==========================================
+   BOTÓN PRINCIPAL (AGREGAR)
+   ========================================== */
+.btn-agregar {
+    width: 100%;                          /* Se fuerza al botón a ocupar todo el ancho disponible horizontalmente */
+    background-color: var(--color-primario); /* Se establece el fondo del botón al azul índigo */
+    color: #ffffff;                       /* Se aplica color blanco puro al texto del botón */
+    border: none;                         /* Se elimina el borde predeterminado que el navegador le pone a los botones */
+    padding: 12px;                        /* Se añaden 12 píxeles de espacio interno para darle volumen al botón */
+    font-size: 15px;                      /* Se establece el tamaño de letra en 15 píxeles */
+    font-weight: 600;                     /* Se aplica un grosor semi-negrita para que resalte la palabra */
+    border-radius: 6px;                   /* Se redondean las esquinas del botón para que coincida con el campo de texto */
+    cursor: pointer;                      /* Se modifica el cursor a una forma de 'mano' para indicar que el elemento es interactivo */
+    margin-bottom: 25px;                  /* Se añade una separación de 25 píxeles antes de la lista de tareas de abajo */
+}
+
+.btn-agregar:hover {
+    background-color: var(--color-primario-hover); /* Al pasar el mouse, se oscurece el fondo del botón para dar respuesta visual */
+}
+
+/* ==========================================
+   ZONA DE LISTA DE TAREAS
+   ========================================== */
+.bloque-listado {
+    border-top: 2px dashed var(--color-bordes); /* Se dibuja una línea superior separadora, de 2 píxeles, punteada (dashed) y color gris */
+    padding-top: 20px;                    /* Se empuja el contenido interno 20 píxeles hacia abajo para que no pegue con la línea separadora */
+}
+
+.bloque-listado h2 {
+    font-size: 15px;                      /* Se define el tamaño del subtítulo "Mis Tareas Pendientes" a 15 píxeles */
+    font-weight: 700;                     /* Se aplica grosor máximo (negrita) a la fuente */
+    color: #334155;                       /* Se aplica un gris oscuro diferente al título principal */
+    margin-bottom: 15px;                  /* Se añade separación inferior antes de que empiece la lista */
+}
+
+#listaTareas {
+    list-style: none;                     /* Se eliminan las viñetas o puntos negros por defecto de las listas (<ul>) del navegador */
+}
+
+/* ==========================================
+   ELEMENTOS DE LA LISTA (LOS RENGLONES <li>)
+   ========================================== */
+.item-tarea {
+    display: flex;                        /* Se utiliza Flexbox para acomodar el texto de la tarea a un lado y el botón al otro */
+    justify-content: space-between;       /* Se empujan los elementos a los extremos: texto a la izquierda, botón rojo a la derecha */
+    align-items: center;                  /* Se alinean verticalmente en el centro del renglón */
+    padding: 12px;                        /* Se da volumen al renglón con 12 píxeles de espacio interno */
+    background-color: #f8fafc;            /* Se aplica un fondo gris muy tenue al renglón */
+    border: 1px solid var(--color-bordes);/* Se dibuja un borde delimitador alrededor del renglón */
+    border-radius: 6px;                   /* Se redondean las esquinas del renglón */
+    margin-bottom: 8px;                   /* Se separan los renglones entre sí por 8 píxeles para que no se peguen */
+    font-size: 14px;                      /* Se define el tamaño de letra de la tarea en 14 píxeles */
+    line-height: 1.4;                     /* Se define la altura de línea (interlineado) al 140% para mejorar la lectura si la tarea es larga */
+}
+
+/* ==========================================
+   BOTÓN SECUNDARIO (ELIMINAR)
+   ========================================== */
+.btn-eliminar {
+    background-color: var(--color-peligro); /* Se establece el fondo rojo definido en las variables */
+    color: #ffffff;                       /* Se pone el texto del botón en color blanco */
+    border: none;                         /* Se remueve el borde predeterminado del navegador */
+    padding: 6px 12px;                    /* Se define un padding asimétrico: 6px arriba/abajo (más delgado) y 12px izquierda/derecha */
+    border-radius: 4px;                   /* Se redondean las esquinas ligeramente (4 píxeles) */
+    font-size: 12px;                      /* Se achica la fuente a 12 píxeles porque es un botón secundario */
+    cursor: pointer;                      /* Se cambia el cursor a una forma de 'mano' interactiva */
+    margin-left: 15px;                    /* Se empuja el botón 15 píxeles hacia la derecha para separarlo del texto de la tarea */
+}
+
+.btn-eliminar:hover {
+    background-color: var(--color-peligro-hover); /* Al pasar el mouse, el botón se oscurece a un rojo más intenso */
+}

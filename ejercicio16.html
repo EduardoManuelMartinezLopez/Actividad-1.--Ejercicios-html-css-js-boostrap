@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<!-- Se declara el tipo de documento como HTML5, indicando al navegador cómo debe interpretar el código -->
+<html lang="es">
+<!-- Se define el idioma del documento como español, esto ayuda a lectores de pantalla y motores de búsqueda -->
+
+<head>
+    <!-- Se establece la codificación de caracteres UTF-8 para soportar tildes, la ñ y símbolos especiales -->
+    <meta charset="UTF-8">
+    
+    <!-- Se configura el viewport para que la página se adapte correctamente al ancho de dispositivos móviles -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <!-- Se define el título que aparecerá en la pestaña del navegador -->
+    <title>Calculadora con Funciones Flecha | Ejercicio 16</title>
+    
+    <!-- Se enlaza la hoja de estilos externa que contiene el diseño visual de esta página -->
+    <link rel="stylesheet" href="css/ejercicio16.css">
+    
+    <!-- Se importa el archivo JavaScript propio del ejercicio. Se usa el atributo 'defer' para que el script 
+         se ejecute únicamente después de que todo el HTML haya sido cargado, evitando errores por elementos aún no existentes -->
+    <script src="js/ejercicio16.js" defer></script>
+    
+    <!-- Se importa la librería externa SweetAlert2 desde un CDN, utilizada para mostrar alertas visuales personalizadas -->
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+</head>
+<body>
+
+    <!-- Contenedor principal que envuelve toda la calculadora, sobre el cual se aplican los estilos de tarjeta -->
+    <div class="contenedor-calculadora">
+        
+        <!-- Título principal visible de la aplicación -->
+        <h1>Calculadora Funcional</h1>
+        <!-- Texto descriptivo breve que explica el propósito de la página -->
+        <p class="subtitulo">Operaciones matemáticas básicas procesadas mediante funciones flecha en ES6.</p>
+        
+        <!-- Div que agrupa todos los elementos interactivos del formulario -->
+        <div class="formulario">
+            
+            <!-- Grupo de campo para el primer número: etiqueta + input -->
+            <div class="grupo-campo">
+                <!-- Etiqueta asociada al input mediante el atributo 'for', mejora la accesibilidad -->
+                <label for="numero1">Primer Número:</label>
+                <!-- Campo de texto donde el usuario escribirá el primer valor numérico -->
+                <input type="text" id="numero1" placeholder="Ej: 15">
+            </div>
+
+            <!-- Grupo de campo para el segundo número, misma estructura que el anterior -->
+            <div class="grupo-campo">
+                <label for="numero2">Segundo Número:</label>
+                <input type="text" id="numero2" placeholder="Ej: 5">
+            </div>
+
+            <!-- Panel que contiene los botones de operaciones, distribuidos en cuadrícula mediante CSS Grid -->
+            <div class="panel-botones">
+                <!-- Cada botón invoca la misma función 'calcularOperacion' del JS, enviándole como argumento 
+                     el tipo de operación a realizar (suma, resta, multiplicación o división) -->
+                <button type="button" onclick="calcularOperacion('suma')" class="btn-operacion">Sumar</button>
+                <button type="button" onclick="calcularOperacion('resta')" class="btn-operacion">Restar</button>
+                <button type="button" onclick="calcularOperacion('multiplicacion')" class="btn-operacion">Multiplicar</button>
+                <button type="button" onclick="calcularOperacion('division')" class="btn-operacion">Dividir</button>
+            </div>
+
+            <!-- Grupo de campo para mostrar el resultado final del cálculo -->
+            <div class="grupo-campo campo-resultado">
+                <label for="resultado">Resultado Final:</label>
+                <!-- Input marcado como 'readonly' para que el usuario no pueda escribir manualmente en él, 
+                     ya que su valor es asignado únicamente por el JavaScript -->
+                <input type="text" id="resultado" readonly placeholder="Esperando operación...">
+            </div>
+            
+        </div>
+    </div>
+
+</body>
+</html>

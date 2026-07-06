@@ -1,0 +1,87 @@
+/* Se declaran variables globales en la raíz para mantener una paleta de colores uniforme y fácil de modificar */
+:root {
+    --color-primario: #059669;       
+    --color-primario-hover: #047857; 
+    --color-fondo: #f4f6f8;          
+    --color-texto: #1e293b;          
+}
+
+/* Se resetean los márgenes y rellenos por defecto de todos los elementos para evitar inconsistencias entre navegadores */
+* {
+    margin: 0;
+    padding: 0;
+    /* Se aplica border-box para que los bordes y rellenos no aumenten el tamaño final de los elementos */
+    box-sizing: border-box;
+}
+
+/* Se aplican estilos generales al cuerpo del documento */
+body {
+    font-family: Arial, sans-serif;
+    background-color: var(--color-fondo);
+    color: var(--color-texto);
+    /* Se utiliza Flexbox para centrar el contenedor principal vertical y horizontalmente en la pantalla */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    /* Se añade un relleno para que la calculadora no toque los bordes en pantallas pequeñas */
+    padding: 20px;
+}
+
+/* Se configuran los estilos del contenedor principal (la calculadora) */
+.contenedor-calculadora {
+    background-color: white;
+    /* Se ajusta el ancho al 100% para dispositivos móviles */
+    width: 100%;
+    /* Se establece un ancho máximo para que no se deforme en pantallas grandes */
+    max-width: 400px;
+    padding: 30px;
+    border-radius: 12px;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+    text-align: center;
+}
+
+/* Se separan visualmente los grupos de campos */
+.grupo-campo {
+    text-align: left;
+    margin-bottom: 15px;
+}
+
+/* Se da estilo a los campos de entrada de texto */
+.grupo-campo input {
+    /* Se indica que ocupen todo el ancho de su contenedor */
+    width: 100%;
+    padding: 12px;
+    border: 1px solid #ccc;
+    border-radius: 6px;
+}
+
+/* Se utiliza CSS Grid para organizar los botones en una cuadrícula de dos columnas */
+.panel-botones {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 10px;
+    margin-bottom: 25px;
+}
+
+/* Se configuran los estilos base de los botones */
+.btn-operacion {
+    background-color: var(--color-primario);
+    color: white;
+    border: none;
+    padding: 12px;
+    border-radius: 6px;
+    cursor: pointer;
+}
+
+/* Se añade un efecto visual al pasar el cursor sobre los botones */
+.btn-operacion:hover {
+    background-color: var(--color-primario-hover);
+}
+
+/* Se diferencia visualmente el campo de resultado para indicar que no es editable */
+.campo-resultado input {
+    background-color: #f8fafc;
+    font-weight: bold;
+    color: var(--color-primario);
+}
